@@ -1,4 +1,4 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8"> //no sirve para indicar los caracteres que usaramos
 
 HTML
 estoy definiendo la edad de Christian 
@@ -45,6 +45,33 @@ JavaScript
     anho= 2030; //nuestro codigo es secuancia, por lo que al re-atribuir el valor de la variable, se usara el nuevo valor en los calculos posteriores
     document.write("<br>");
     document.write("Carlos tiene: " +(anho-1990)+ "años" );
+    document.write("<br>");
+
+    //Manejo de variables
+
+    anho = 2020;
+    document.write("Jimena tiene: " +(anho-2000)+ "años" );
+    document.write("<br>");
+    document.write("Paola tiene: " +(anho-1995)+ "años" );
+    document.write("<br>");
+    document.write("Laura tiene: " +(anho-1990)+ "años" );
+
+    //uso de camelCase para nombrar variables
+
+    var edadJimena = 10;
+    var edadPaola = 25;
+    var edadLaura = 15;
+
+    //variables de string
+    var nombre1 = "Jimena";
+    var nombre2 = "Paola";
+    var nombre3 = "Laura";
+
+    promedio = (edadJimena+edadPaola+edadLaura)/3
+
+    document.write("El promedio de edad de " +nombre1+ ", " +nombre2+ " y " +nombre3+ " es: " + Math.round(promedio)); //Math.round redondea el numero
+    document.write("<br>");
+
 </script>
 
-El document.write permite concatenar con HT,L y presentar en HTML cualquier cosa que deseemos
+El document.write permite concatenar con HTML y presentar en HTML cualquier cosa que deseemos

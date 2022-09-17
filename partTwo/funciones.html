@@ -6,6 +6,8 @@
 
     //crear funcion salto de linea
 
+
+    //funcion sin parametro de entrada
     function saltarLinea(){ //no recibe parametros
         document.write("<br>"); //es importrante la identación de las funciones, lo que esta entre llaves, es lo que ejecutara
     }
@@ -19,10 +21,22 @@
     document.write("Pedro tiene: "+ (anho-1995) + " años");
     saltarLinea();
     document.write("Carlos tiene: "+ (anho-2005) + " años");
+    saltarLinea();
 
+
+    //funcion con parametro de entrada
     function imprimir(frase){
         document.write(frase);
+        saltarLinea(); //se llama a la funcion saltar linea
     }
 
+    saltarLinea();
     imprimir("hola amigos");
+    saltarLinea();
+
+    //este codigo calcula la edad de una persona, y la imprime en pantalla
+
+    imprimir("Juan tiene: "+ (anho-2000) + " años");
+    imprimir("Pedro tiene: "+ (anho-1995) + " años");
+    imprimir("Carlos tiene: "+ (anho-2005) + " años");
 </script>

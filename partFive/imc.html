@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA CALCULAR IMC</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");
+    }  
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularIMC(peso, altura, nombre) {
+        var imc = peso / (altura * altura);
+        imprimir("El IMC calculado de " + nombre + " es: " + imc);
+        //return imc; lo que regresa la funcion que en este caso es el valor del imc
+    }
+
+    function calcularIMC2(peso, altura) {
+        return (peso / (altura * altura));
+    }
+
+    calcularIMC(71, 1.72, "Christian");
+    calcularIMC(71, 1.72, "felipe");
+
+    function calcularimc(peso1, altura1,nombre1,peso2,altura2,nombre2){
+        var imc1 = peso1 / (altura1 * altura1);
+        var imc2 = peso2 / (altura2 * altura2);
+        imprimir("El IMC calculado de " + nombre1 + " es: " + imc1);
+        imprimir("El IMC calculado de " + nombre2 + " es: " + imc2);
+        imprimir("El promedio del imc calculado de " + nombre1 + " y " + nombre2 + " es: " + (imc1+imc2)/2);
+    }
+
+    calcularimc(71, 1.72, "Christian", 71, 1.72, "felipe");
+    calcularimc(60,1.70,"gabriela", 55,1.60,"maria");
+
+    //interaccion con ususarios
+    nombre = prompt("Ingrese su nombre");
+    pesoInformado = prompt(nombre + ", Ingrese su peso"); //prompt es una funcion que permite ingresar datos por teclado
+    alturaInformado = prompt(nombre + ", Ingrese su altura");
+
+    imcCalculado = calcularIMC2(pesoInformado, alturaInformado);
+    imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
+
+</script>

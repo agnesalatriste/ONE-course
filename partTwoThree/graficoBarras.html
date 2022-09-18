@@ -1,0 +1,51 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+//arreglo con porcentajes de los navegadores
+    var serie2009 = [6, 47, 41, 3, 3];
+    var serie2019 = [81, 9, 3, 3, 4];
+//Arreglo colotes de los navegadores
+    var colores = ["blue","green","yellow", "red","gray"];
+
+    function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle=color;
+        pincel.fillRect(x,y, base, altura);
+        pincel.strokeStyle="black";
+        pincel.strokeRect(x,y, base, altura);
+    }
+
+    function escribirTexto(x , y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font="15px Georgia";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x, y);    
+    }
+
+
+    //Aquí viene el texto faltante
+
+    function dibujarBarra(x, y, serie, colores, texto) {
+
+        var sumay = 0; //variable para acumular la altura de las barras
+        for(var i=0; i<serie.length; i++){
+            var porcentajes = serie[i];
+            var color  = colores[i];
+            dibujarRectangulo(x,y+ sumay, 50, porcentajes, color);
+            sumay = sumay + porcentajes;  // variable auxiliar, checar bien
+        }
+        escribirTexto(x,y-10, texto);
+
+    //Aquí necesitamos escribir el texto y dibujar los rectángulos
+
+    }
+
+    dibujarBarra(50, 50, serie2009, colores, "2009");
+    dibujarBarra(150, 50, serie2019, colores, "2019");
+
+</script>

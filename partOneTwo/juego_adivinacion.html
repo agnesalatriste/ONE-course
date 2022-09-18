@@ -15,14 +15,24 @@
     }
 
 var numeroPensado = Math.round(Math.random()*10); //math.round redondea el numero, math.random genera un numero aleatorio entre 0 y 1, por lo que al multiplicarlo por 10, obtendremos un número entre 0 y 10
-var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0-10"));
+var intentos = 3;
+var i = 1;
 
-if (numeroLanzado == numeroPensado) {
-    imprimir("Adivinaste el numero");
-}else{ // !=  es para un número diferente
-    imprimir("Usted   erró, el numero pensado era " + numeroPensado);
+
+while(i <= intentos){
+
+    var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0-10"));
+
+    if (numeroLanzado == numeroPensado) {
+        imprimir("Usted acerto, en el intento " + i + "el número pensado era " + numeroPensado);
+        break; // break es para salir del ciclo
+    }else{ // !=  es para un número diferente
+        imprimir("Usted  erró");
+    }
+    
+    i++;
 }
-
+imprimir("fin, el número pensado era " + numeroPensado);
 
 //loteria
 function sorteo(n){

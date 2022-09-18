@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"></canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle="grey";
+    pincel.fillRect(0,0, 600, 400);
+
+    function recibirAlerta(evento){ //evento es un objeto que contiene información del evento
+        var x = evento.pageX - pantalla.offsetLeft; //evento.pageX es la posición del mouse en el eje x en la pagina, por lo que debemos restar los datos de la pantalla
+        var y = evento.pageY - pantalla.offsetTop; //evento.pageY es la posición del mouse en el eje y en la pagina, por lo que debemos restar los datos de la pantalla
+
+        console.log(evento);
+        console.log(x+" , "+y);
+    }
+
+    function dibujaCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft; //evento.pageX es la posición del mouse en el eje x en la pagina, por lo que debemos restar los datos de la pantalla
+        var y = evento.pageY - pantalla.offsetTop; //evento.pageY es la posición del mouse en el eje y en la pagina, por lo que debemos restar los datos de la pantalla
+        
+        pincel.fillStyle=colores[color];
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2*Math.PI);
+        pincel.fill();
+        console.log(x+" , "+y);
+    }
+
+    //no se pasa parametro porque el evento se pasa automaticamente, ya que es propio del navegador
+    //pantalla.onclick = recibirAlerta; //cuando en nuestro objeto pantalla ocurre el evento onclick, se ejecuta la función recibirAlerta
+
+    pantalla.onclick=dibujaCirculo;
+
+    
+    var colores = ["blue","red", "green"]
+    var color = 0;
+
+    function alterarColor() {
+        color++;
+        if(color >= colores.length){
+            color = 0;
+        }
+        alert("Funcionó");
+        return false;
+    }
+
+    pantalla.oncontextmenu = alterarColor;
+
+</script>

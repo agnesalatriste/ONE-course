@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA DE MEDIA EDADES DE LA FAMILIA</h1>
+
+<script>
+    
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>"); 
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numeroMiembros = parseInt(prompt("Ingrese la cantidad de miembros de la familia"));
+    var contador = 1;
+    var sumaEdades = 0;
+
+    while (contador <= numeroMiembros) {
+        var edad = parseInt(prompt("Ingrese la edad del familar"));
+        var sumaEdades = sumaEdades + edad;
+        contador++;
+    }
+
+    mediaEdades = sumaEdades / numeroMiembros;
+    imprimir(sumaEdades);
+    imprimir("La media de las edades de la familia es: " + mediaEdades);
+    imprimir("fin");
+    
+</script>

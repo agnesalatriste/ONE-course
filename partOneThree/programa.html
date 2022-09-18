@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<canvas width="600" height="400"> <!--canvas es un espacio donde se pueden crear graficos-->
+
+</canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pinceles = pantalla.getContext("2d"); //getContext es un metodo que devuelve un objeto que permite dibujar en el canvas, que seria el contenido de la pantalla
+
+    pinceles.fillStyle = "lightgrey"; //fillStyle es una propiedad que permite cambiar el color de relleno
+    pinceles.fillRect(0,0,600,400); //fillRect es una funcion que permite dibujar un rectangulo en el canvas, los parametros son: x, y, ancho, alto
+
+    pinceles.fillStyle = "green";
+    pinceles.fillRect(0,0,200,400);
+
+    pinceles.fillStyle = "red";
+    pinceles.fillRect(400,0,200,400);
+
+    pinceles.fillStyle = "yellow";
+    pinceles.beginPath(); //beginPath es una funcion que permite iniciar un camino
+    pinceles.moveTo(300,200); //moveTo es una funcion que permite mover el pincel a una posicion
+    pinceles.lineTo(200,400); //lineTo es una funcion que permite dibujar una linea desde la posicion actual del pincel hasta la posicion indicada
+    pinceles.lineTo(400,400);
+    pinceles.fill(); //fill es una funcion que permite rellenar el camino dibujado
+
+    pinceles.fillStyle = "blue";
+    pinceles.beginPath();
+    pinceles.arc(300,200,50,0,Math.PI*2); //arc es una funcion que permite dibujar un arco, los parametros son: x, y, radio, angulo inicial, angulo final
+    pinceles.fill();
+
+//buscar documentacion 2d canvas
+</script>

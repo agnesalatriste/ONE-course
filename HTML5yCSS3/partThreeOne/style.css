@@ -1,14 +1,12 @@
 body{
     background: #cccccc;
 }
+.tituloPrincipal{
+    padding: 30 px;
+}
 
-h1{
+.tituloCentralizado{
     text-align: center;
-    height: 150px;
-    border: 10px solid #000000;
-    padding: 20px;
-    margin: 40px;
-
 }
 
 p{ /* esto son selectores*/
@@ -35,10 +33,6 @@ em strong{ /* se aplican los estilos de css para esta especifica combinacion de 
 .diferenciales{
     background: #ffffff;
     padding: 30px;
-}
-
-h2{
-    text-align: center;
 }
 
 .items{ /*class selector*/

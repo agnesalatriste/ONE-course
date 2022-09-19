@@ -2,10 +2,27 @@ body{
     background: #cccccc;
 }
 
+h1{
+    text-align: center;
+    height: 150px;
+    border: 10px solid #000000;
+    padding: 20px;
+    margin: 40px;
+
+}
+
 p{ /* esto son selectores*/
     text-align: center;
 }
 
 em strong{ /* se aplican los estilos de css para esta especifica combinacion de selectores*/
     color: red;
+}
+
+#mision{  /* id selector*/
+    font-size: 20px;
+}
+
+#banner{
+    width: 100%;;
 }

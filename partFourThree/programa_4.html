@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"></canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle="grey";
+    pincel.fillRect(0,0, 600, 400);
+
+    //dibujar circulo
+
+    function dibujarCircunferencia(x,y,radio){
+        pincel.fillStyle="blue";
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*Math.PI);
+        pincel.fill();
+    }
+
+    function limpiarParametro(){
+        pincel.clearRect(0,0, 600, 400);
+    }
+
+    var x=0; //le damos un valor inicial para que no se quede indefinido
+    function actrualizarPantalla(){ //creara la circunferencia
+        limpiarParametro(); 
+        dibujarCircunferencia(x,20,10);
+        x++; //incrementamos el valor de x, se movera nuestro objeto sobre el eje x
+    }
+
+    setInterval(actrualizarPantalla,200); //se ejecuta cada 5 milisegundos, setInterval es una función que se ejecuta cada cierto tiempo y recibe los parametros: la función que se ejecutara y el tiempo en milisegundos
+    //es importante que al llamar a una funcion, no se pongan los parentesis, ya que si se ponen, se ejecutara la función y no se podra pasar como parametro 
+
+</script>

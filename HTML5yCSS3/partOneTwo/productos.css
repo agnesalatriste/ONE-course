@@ -1,5 +1,17 @@
 header{
     background-color: #bbbbbb;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative; /*por defecto es static*/
+    margin: 0 auto; /*centra el elemento, la mejor tecnica para centar un div es usar el calculo de margin automatico, asi el navegador calcula el width restante, lo divide entre 2 y agrega la mitad a cada lado*/
+}
+nav{
+    position: absolute; 
+    top: 110;
+    right: 0;
 }
 
 nav li{
@@ -14,3 +26,4 @@ nav a{
     font-size: 22px;
     text-decoration: none; /* quita el subrayado de los links */
 }
+

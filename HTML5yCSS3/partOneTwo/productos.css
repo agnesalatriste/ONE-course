@@ -1,0 +1,16 @@
+header{
+    background-color: #bbbbbb;
+}
+
+nav li{
+    display: inline; /* por defecto li viene en display:block, hay que cambiarlo*/
+    margin: 10px;
+}
+
+nav a{
+    text-transform: uppercase; /* para que las letras sean mayusculas*/
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none; /* quita el subrayado de los links */
+}

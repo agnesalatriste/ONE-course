@@ -27,6 +27,11 @@ nav a{
     text-decoration: none; /* quita el subrayado de los links */
 }
 
+nav a:hover{ /* cuando el mouse pasa por encima del link*/
+    color: #c78c19;
+    text-decoration: underline;
+}
+
 .productos{
     width: 940px;
     margin: 0 auto;
@@ -42,7 +47,15 @@ nav a{
     box-sizing: border-box; /* para que el padding no se sume al width*/
     border: 2px solid #000000;
     border-radius: 10px;
+}
 
+.productos li:hover{
+    border-color:#c78c19;
+
+}
+
+.producto li:active{ /* cuando se hace click en el link*/
+    border-color: #088c19;
 }
 
 .productos h2{
@@ -50,6 +63,10 @@ nav a{
     font-weight: bold;
 }
 
+.producto li:hover h2{ /*el hover afecta al h2, dentro de los li que estan en la class producto*/
+    font-size: 33px;
+
+}
 .producto-despcripcion{
     font-size: 18px;
     color: #666666;

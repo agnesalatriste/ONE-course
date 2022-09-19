@@ -1,0 +1,11 @@
+body{
+    background: #cccccc;
+}
+
+p{ /* esto son selectores*/
+    text-align: center;
+}
+
+em strong{ /* se aplican los estilos de css para esta especifica combinacion de selectores*/
+    color: red;
+}

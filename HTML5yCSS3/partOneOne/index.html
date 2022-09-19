@@ -20,17 +20,32 @@
 
     <body> <!--Contiene todo el contenido de la pagina-->
 
-        <img id="banner" src="banner/banner.jpg" alt="">
+        <img id="banner" src="../partFiveOne/banner.jpg" alt="">
         <!--Los marcadores de css se utilizan para alterar el visual de la página, para ello usamos la propiedad style, esta metodologia de uso css se llama "metodologia inline"-->
-        <h1 style="text-align: center; background: #cccccc;"> Sobre la Barbería Alura</h1>
 
-        <p> Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
+        <div class="bloquePrincipal"> <!--Se crea un contenedor para el contenido principal de la pagina-->
+            <h1 style="text-align: center; background: #cccccc;"> Sobre la Barbería Alura</h1>
 
-        <!-- etiquetas anidadas, se pueden anidar etiquetas dentro de otras etiquetas, las etiquetas heredan las propiedades de las etiquetas que las contienen, por ejemplo: -->
-        <p id="mision"  ><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em></p>
+            <p> Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
 
-        <!-- la etiqueta strong se usa para resaltar el texto, mientras que la etiqueta em se usa para enfatizar-->
+            <!-- etiquetas anidadas, se pueden anidar etiquetas dentro de otras etiquetas, las etiquetas heredan las propiedades de las etiquetas que las contienen, por ejemplo: -->
+            <p id="mision"  ><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em></p>
 
-        <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p>
+            <!-- la etiqueta strong se usa para resaltar el texto, mientras que la etiqueta em se usa para enfatizar-->
+
+            <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p>
+
+        </div>
+        <div class="diferenciales">
+            <h2>Diferenciales</h2>
+            <ul> <!--La etiqueta ul se usa para crear listas no ordenadas unorder list, es una etiqueta de bloque-->
+                <li class="items">Atencion personalizada para los clientes</li>  <!--La etiqueta li se usa para crear los elementos de la lista-->
+                <li class="items">Espacio diferenciado</li>
+                <li class="items">Localización</li>
+                <li class="items">Profesionales calificados</li>
+            </ul>
+
+            <img src="../partFiveOne/diferenciales.jpg" alt="" class="imagenDiferencial">
+        </div>
     </body>
 </html>

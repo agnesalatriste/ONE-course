@@ -26,3 +26,32 @@ em strong{ /* se aplican los estilos de css para esta especifica combinacion de 
 #banner{
     width: 100%;;
 }
+
+.bloquePrincipal{
+    background: #cccccc;
+    padding: 20px; /* padding es el espacio interno*/
+}
+
+.diferenciales{
+    background: #ffffff;
+    padding: 30px;
+}
+
+h2{
+    text-align: center;
+}
+
+.items{ /*class selector*/
+    font-style: italic;
+}
+
+ul{
+    display: inline-block; /* para que se muestren en linea*/
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagenDiferencial{
+    width: 50%;
+}

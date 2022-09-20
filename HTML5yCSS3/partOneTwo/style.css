@@ -137,3 +137,18 @@ form label, form legend{
     background-color: darkorange;
     transform: scale(1.2); /* scale sirve para aumentar el tamaño del elemento proporcionalmente, para usar más de una transformacion, se debe de usar sobre el mismo, agregando mas elemtos a transformar, por ejemplo scale(1.2) rotate(75)*/
 }
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}

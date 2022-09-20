@@ -11,7 +11,7 @@
         <header>
             <div class="caja">
                 <h1>
-                    <img src="../partOneTwo/imagenes/logo.png" alt="logo">
+                    <img src="../partOneTwo/imagenes/logo.png" alt="logo de la barberia alura">
                 </h1>
                 <nav>
                     <ul>
@@ -25,19 +25,19 @@
         <main>
             <form action=""> <!--etiqueta de formulario-->
                 <label for="nombreApellido">Nombre y Apellido</label> <!--Etiqueta del input-->
-                <input type="text" id="nombreApellido" class="input-padron"> <!--etiqueta de entrada de texto, tienen por default display inline-->
+                <input type="text" id="nombreApellido" class="input-padron" required> <!--etiqueta de entrada de texto, tienen por default display inline-->
 
                 <label for="email">Correo electronico</label>
-                <input type="email" id="email" class="input-padron">
+                <input type="email" id="email" class="input-padron" required placeholder="email@dominio.com"> <!--required es el atributo que nos idica que ese input es obligatorio-->
 
                 <label for="telefono">Telefono</label>
-                <input type="tel" id="telefono" class="input-padron">
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(xx)xxxx xxxx">
 
                 <label for="mensaje">Mensaje</label>
-                <textarea name="" id="mensaje" cols="70" rows="10" class="input-padron"></textarea> <!--etiqueta de entrada de texto multilinea-->
+                <textarea name="" id="mensaje" cols="70" rows="10" class="input-padron" required></textarea> <!--etiqueta de entrada de texto multilinea-->
 
-                <div>
-                    <p>¿Cómo le gustaria que le contactaramos?</p>
+                <fieldset style="border:0 ;"> <!--etiqueta de agrupacion de elementos, que estan relacionado con un mismo grupo-->
+                    <legend>¿Cómo le gustaria que le contactaramos?</legend> <!--legend es la etiqueta de titulo para el fieldset-->
 
                     <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
                     <!--etiqueta de entrada de radio, se debe especificar un atributo name para que se pueda seleccionar un solo radio button-->
@@ -45,26 +45,26 @@
                     <label for="radio-email"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
                     <!--e coloca sentro del label el input de type radio, para  que tengamos el nombre y el boton-->
                     
-                    <label for="radio-email"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp">Whatsapp</label>
+                    <label for="radio-email"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label> <!--checked es el atributo que deja por defecto seleccionado esta opcion-->
                     
-                </div>
-                <div>
-                    <p>¿En cuál horario prefiere que le atendamos?</p>
+                </fieldset>
+                <fieldset style="border:0 ;"> <!--la etiqueta fieldset viene con un border por default, por lo que debemos quitarsela-->
+                    <legend>¿En cuál horario prefiere que le atendamos?</legend>
                     <select name="" id="">
                         <option value="">Mañana</option>
                         <option value="">Tarde</option>
                         <option value="">Noche</option>
                     </select>
-                </div>
+                </fieldset>
 
-                <label class="checkbox"><input type="checkbox" name="" id="">Le gustaria recibir novedades de la barberia</label>
+                <label class="checkbox"><input type="checkbox" name="" id="" checked>¿Le gustaria recibir novedades de la barberia Alura?</label>
 
                 <input type="submit" value="Enviar formulario">
             </form>
 
         </main>
         <footer>
-            <img src="../partSevenTwo/logo-blanco.png" alt="logo">
+            <img src="../partSevenTwo/logo-blanco.png" alt="logo de la barberia alura">
             <p class="copyright">&copy Copyright Barberia alura-2020 </p> <!--El símbolo &copy es un caracter especial que se utiliza para poner el signo de derechos de autor, lo podemos encontrar en unicode table-->
         </footer>
     </body>

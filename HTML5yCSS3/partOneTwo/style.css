@@ -119,3 +119,21 @@ form label, form legend{
 .checkbox{
     margin: 20px 0;
 }
+
+.enviar{
+    width: 40px;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /* transicion visual con css de un elemento, para que todos los elemtos que estan en el hover*/
+    cursor: pointer; /* para que el cursor se vea como un click*/
+}
+
+.enviar:hover{
+    background-color: darkorange;
+    transform: scale(1.2); /* scale sirve para aumentar el tamaño del elemento proporcionalmente, para usar más de una transformacion, se debe de usar sobre el mismo, agregando mas elemtos a transformar, por ejemplo scale(1.2) rotate(75)*/
+}

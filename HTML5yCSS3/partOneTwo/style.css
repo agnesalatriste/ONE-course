@@ -214,6 +214,7 @@ p::first-line{
     margin: 0 auto;
 }
 
+/*calculo es una funcion en css que nos permite realizar calculos para el width, por ejemplo, si queremos que el width sea el 50% del width del elemento padre, podemos usar calc(50% - 20px), para que el width sea el 50% del width del elemento padre, menos 20px*/
 .listaDiferenciales{
     width: 40%;
     display: inline-block;
@@ -240,3 +241,26 @@ p::first-line{
     width: 560px;
     margin: 1em auto;
 }
+
+
+/* Selectores avanzados
+    Selector > , para acceder a los hijos de determinado elemento. Por ejemplo, para acceder todos los p dentro del main:
+    main > p{
+        color: red;
+    }
+
+    Selector +, para acceder al primer hermano de determinado elemento. Por ejemplo, para acceder el primer p después de una img:
+    img + p{
+        color: red;
+    }
+
+    Selector ~, para acceder a todos los hermanos de determinado elemento. Por ejemplo, para acceder todos los p después de una img:
+    img ~ p {
+        color: red;
+    }
+
+    Selector not, para acceder a los elementos, excepto algunos. Por ejemplo, para acceder a todos los p dentro de main excepto el p que tiene id missao:
+    main p:not(#missao){
+        color: red;
+    }
+*/

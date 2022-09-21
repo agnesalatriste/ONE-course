@@ -152,3 +152,34 @@ td, th{
     border: 1px solid #000000;
     padding: 8px 15px;
 }
+
+/* CSS para nuestra home */
+
+.banner{
+    width: 100%
+}
+
+.tituloPrincipal{
+    text-align: center;
+    font-size: 2em; /*2em es el doble del tamaño de la fuente del elemento padre*/
+    margin: 0 0 1em;
+    clear: left; /* para que el titulo no se superponga con el banner, el float se limpia con la propiedad clear*/
+}
+
+.bloquePrincipal{
+    margin:0 0 1em;
+}
+
+.bloquePrincipal strong{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    float: left; /* para que el elemento se desplace a la izquierda y el texto pueda estar a lado*/
+    margin: 0 20px 20px 0; /* superior derecho inferior izquierdo*/
+}
+
+.imagenDiferencial{
+    width: 60%;
+}

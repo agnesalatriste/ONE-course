@@ -5,10 +5,9 @@
     <head> <!--Contiene informacion sobre el documento, como el titulo, el autor, etc-->
 
         <meta charset="utf-8"> <!--Indica que el documento esta codificado en UTF-8, son los caracteres especiales que usamos en diversos idiomas, entre ellos el español-->
-
         <title>Barbería Alura</title> <!--Titulo de la pagina-->
-
-        <link rel="stylesheet" href="../partThreeOne/style-home.css"> <!--Indica que el documento va a usar un archivo de estilos externo-->
+        <link rel="stylesheet" href="../partThreeTwo/reset.css">
+        <link rel="stylesheet" href="../partOneTwo/style.css"> <!--Indica que el documento va a usar un archivo de estilos externo-->
 
         <!--La segunda forma de usar css en un documento es dentro de head, agregar la etiqueta style, y dentro colocar los atributos y valores que vayamos a asignar-->
         <style>
@@ -19,36 +18,54 @@
     </head>
 
     <body> <!--Contiene todo el contenido de la pagina-->
-        <header> <!--Contiene el encabezado de la pagina-->
-            <h1 class="tituloPrincipal">Barberia Alura</h1>
+        
+        <header>
+            <div class="caja">
+                <h1>
+                    <img src="../partOneTwo/imagenes/logo.png" alt="logo de la barberia alura">
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="../partOneOne/index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="">Contactos</a></li>
+                    </ul>    
+                </nav>
+            </div>
         </header>
-
-        <img id="banner" src="../partFiveOne/banner.jpg" alt="">
-        <!--Los marcadores de css se utilizan para alterar el visual de la página, para ello usamos la propiedad style, esta metodologia de uso css se llama "metodologia inline"-->
-
-        <div class="bloquePrincipal"> <!--Se crea un contenedor para el contenido principal de la pagina-->
-            <h2 class="tituloCentralizado"> Sobre la Barbería Alura</h2>
-
-            <p> Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
-
-            <!-- etiquetas anidadas, se pueden anidar etiquetas dentro de otras etiquetas, las etiquetas heredan las propiedades de las etiquetas que las contienen, por ejemplo: -->
-            <p id="mision"  ><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em></p>
-
-            <!-- la etiqueta strong se usa para resaltar el texto, mientras que la etiqueta em se usa para enfatizar-->
-
-            <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p>
-
-        </div>
-        <div class="diferenciales">
-            <h3 class="tituloCentralizado">Diferenciales</h3>
-            <ul> <!--La etiqueta ul se usa para crear listas no ordenadas unorder list, es una etiqueta de bloque-->
-                <li class="items">Atencion personalizada para los clientes</li>  <!--La etiqueta li se usa para crear los elementos de la lista-->
-                <li class="items">Espacio diferenciado</li>
-                <li class="items">Localización</li>
-                <li class="items">Profesionales calificados</li>
-            </ul>
-
-            <img src="../partFiveOne/diferenciales.jpg" alt="" class="imagenDiferencial">
-        </div>
+        <main>
+            <img class="banner" src="../partFiveOne/banner.jpg" alt="">
+            <!--Los marcadores de css se utilizan para alterar el visual de la página, para ello usamos la propiedad style, esta metodologia de uso css se llama "metodologia inline"-->
+    
+            <section class="bloquePrincipal"> <!--Se crea un contenedor para el contenido principal de la pagina-->
+                <h2 class="tituloPrincipal"> Sobre la Barbería Alura</h2>
+    
+                <img class="utensilios"src="../partFiveOne/utensilios[1].jpg" alt="brocha de barbero">
+                <p> Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
+    
+                <!-- etiquetas anidadas, se pueden anidar etiquetas dentro de otras etiquetas, las etiquetas heredan las propiedades de las etiquetas que las contienen, por ejemplo: -->
+                <p id="mision"  ><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em></p>
+    
+                <!-- la etiqueta strong se usa para resaltar el texto, mientras que la etiqueta em se usa para enfatizar-->
+    
+                <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p>
+    
+            </scetion>
+            <section class="diferenciales"> <!--La etiqueta section noy ayuda a seccionar la informacion que sea semantica, es decir, con igual significado-->
+                <h3 class="tituloPrincipal">Diferenciales</h3>
+                <ul> <!--La etiqueta ul se usa para crear listas no ordenadas unorder list, es una etiqueta de bloque-->
+                    <li class="items">Atencion personalizada para los clientes</li>  <!--La etiqueta li se usa para crear los elementos de la lista-->
+                    <li class="items">Espacio diferenciado</li>
+                    <li class="items">Localización</li>
+                    <li class="items">Profesionales calificados</li>
+                </ul>
+    
+                <img src="../partFiveOne/diferenciales.jpg" alt="" class="imagenDiferencial">
+            </div>    
+        </main>
+        <footer>
+            <img src="../partSevenTwo/logo-blanco.png" alt="logo de la barberia alura">
+            <p class="copyright">&copy Copyright Barberia alura-2020 </p> <!--El símbolo &copy es un caracter especial que se utiliza para poner el signo de derechos de autor, lo podemos encontrar en unicode table-->
+        </footer>
     </body>
 </html>

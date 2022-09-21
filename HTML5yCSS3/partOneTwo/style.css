@@ -94,12 +94,7 @@ footer{
     margin: 20px;
 }
 
-/* Empezamos a usar los estilos que usaremos en contacto.html*/
-
-main{
-    width: 940px;
-    margin: 0 auto;
-}
+/* Empezamos a usar los estilos que usaremos en contacto.html */
 
 form{
     margin: 40px 0;
@@ -167,8 +162,21 @@ td, th{
     clear: left; /* para que el titulo no se superponga con el banner, el float se limpia con la propiedad clear*/
 }
 
+.tituloPrincipal::first-letter{
+    font-weight: bold;
+}
+
+p::first-line{
+    font-style: italic;
+}
+
+
 .bloquePrincipal{
     margin:0 0 1em;
+    padding: 3em 0;
+    background: #ffffff;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .bloquePrincipal strong{
@@ -183,11 +191,45 @@ td, th{
 
 .mapa{
     padding: 3em 0;
+    background:linear-gradient(#ffffff, #888888) ;
 }
 
 .mapa p{
     margin: 0 0 2em;
     text-align: center;
+}
+
+.mapaContenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenidoDiferencial{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.listaDiferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top; /* para que el texto se alinee con el texto de la derecha*/
+}
+
+.items{
+    line-height: 1.5; /* para que el texto tenga un espacio entre lineas*/
+}
+
+.items::before{
+    content:"★";  /* para agregar un caracter antes del titulo*/
+}
+
+.items:first-child{ /* para que el primer elemento de la lista tenga un estilo diferente, estas son pseudo clases*/
+    font-weight: bold;
 }
 
 .imagenDiferencial{

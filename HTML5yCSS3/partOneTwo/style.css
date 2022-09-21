@@ -235,6 +235,12 @@ p::first-line{
 
 .imagenDiferencial{
     width: 60%;
+    transition: 400ms; /* el tiempo en milisegundos que tarda en hacer la transicion del hover*/
+    box-shadow: 10px 10px 30px 15px #000000; /* para agregar una sombra al elemento, se pueden colocar más de una sombra se parandolo por comas, sombras interns es con la propiedad insed*/
+}
+
+.imagenDiferencial:hover{
+    opacity: 0.3; /* para que la imagen se vea opaca*/
 }
 
 .video{

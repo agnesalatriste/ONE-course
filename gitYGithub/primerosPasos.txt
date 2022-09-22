@@ -1,0 +1,40 @@
+Los sistemas de control de versiones:
+*Nos ayudan a mantener un historial de cambios;
+*Nos ayudan a tener control sobre cada cambio en el código;
+*Nos ayudan a que un cambio de una persona no influya en el cambio realizado por otra;
+*Etc
+
+git init inicializa un repositorio en el directorio donde se ejecuta el comando. Desde este comando, Git podrá administrar los cambios realizados en los archivos.
+
+git status nos sirve para analizar el estado de nuestro repositorio.
+algunos de los terminos que podemos obtener al tirar un git status, son los siguientes:
+--HEAD: Estado actual de nuestro código, es decir, donde nos colocó Git
+--Working tree: Lugar donde los archivos realmente están siendo almacenados
+--index: Lugar donde Git almacena lo que será commiteado, es decir, la ubicación entre el working tree y el repositorio de Git en sí.
+
+Para más información sobre los posibles status, visitar la siguiente documentación: 
+
+https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio
+
+git add no ayuda para agregar los cambios que hemos hecho en el repositorio.
+
+git commit nos ayuda a comentar los cambios que se estan haciendo en el repositorio.
+
+git config --global user.email "email usuario" nos ayuda con la configiracion de git
+
+Antes de cualquier interacción con git, es necesario informar quién eres para que almacene correctamente los datos del autor de cada uno de los cambios en el código.
+git config --local user.name "Tu nombre aquí" 
+git config --local user.email "Tu@email.aqui”
+
+*se puede usar --local, que sera la configuración local para ese proyecto, o --global para todos los proyectos que se realizaran en la compuadora
+
+//para ver nuestras configuraciones, podemos usar el comando git config user.name, o user.email, según lo que necesitemos visualizar
+
+para más detalles de configuración, visitar:
+https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+
+
+
+git log nos sirve para ver el historial de cambios realizados en nuestro proyecto, si a este comando le agregamos "--oneline", podemos ver la informacion en una sola linea, por el contrario, si queremos ver más información, debemos usar la opcion "-p", para salir de este modo, nos vamos al final y tecleamos :q .
+
+para más informacion al respecto, podemos visitar: https://devhints.io/git-log 

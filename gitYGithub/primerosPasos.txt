@@ -66,6 +66,10 @@ git checkout -b branchname //nos deja crear una nueva rama y movernos en automat
 visitar la siguiente página para ver de forma visual las ramas:
 git-school.github.io/visualizing-git/
 
+La descripción del comando git checkout --help, en una traducción libre es: “Actualizar los archivos en working tree para que queden en la versión especificada. […]”.
+
+Básicamente, podemos dejar nuestro código en el estado de último commit de una branch, de un commit específico, o incluso tags (que veremos más adelante).
+
 git merge branchenamme //trae las modificaciones de la rama que estamos invocandoa la rama sobre la que escribimos el comando
 
 De esta forma colocaremos el HEAD en la Branch master, o sea, haremos que nuestro código esté en el estado que lo dejamos con el últimocommit en master. Después, uniremos el trabajo de la Branch titulo con la Branch actual (master).
@@ -77,3 +81,19 @@ El merge junta los trabajos y genera un merge commit. El rebase aplica los commi
 
 ¡Opción correcta! Con el git restore deshacemos una modificación que aún no fue agregada al index o stage, o sea, antes de hacer git add. Después de agregar con git add, para deshacer una modificación, necesitamos sacarlo de este estado, con git restore --staged. Ahora, si ya hicimos el commit, el comando git revert puede salvarnos.
 
+Vimos cómo podemos utilizar git stash para almacenar temporalmente algunas de nuestras modificaciones.
+ Cuando necesitamos pausar el desarrollo de alguna funcionalidad, o corrección, antes de finalizar, y tal vez no sea interesante realizar un commit, pues nuestro código puede no estar funcionando aún. En este caso es interesante guardar el trabajo para poder volver a él después.
+
+ Que Git puede ayudarnos a deshacer cambios que no vamos a utilizar;
+Que, para deshacer un cambio antes de agregarlo para commit(con git add), podemos usar el comando git restore <archivos>;
+Que, para deshacer un cambio después de agregarlo paracommit, primero debemos ejecutar git restore --staged <archivos> y luego podemos deshacerlos con git restore <files>;
+Que, para revertir los cambios realizados en un commit, el comando git revert puede ser la solución;
+Que el comando git revert genera un nuevo commit informando que los cambios fueron deshechos;
+Que, para guardar un trabajo y reanudarlo más tarde, podemos usar git stash;
+Que, para ver qué cambios hay en el stash, podemos usar el comando git stash list;
+Que, con el comando git stash apply <número>, podemos aplicar un cambio específico al stash;
+Que el comando git stash drop <número> elimina un elemento determinado del stash;
+Que el comando git stash pop aplica y elimina el último cambio que se agregó alstash;
+Que git checkout sirve para dejar la copia del código de muestra aplicación en el estado que queremos:
+git checkout <branch> deja el código en el estado de una branchcon el nombre <branch>;
+git checkout <hash> deja el código en el estado de commit con el hash <hash>.

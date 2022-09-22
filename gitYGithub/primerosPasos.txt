@@ -38,3 +38,16 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 git log nos sirve para ver el historial de cambios realizados en nuestro proyecto, si a este comando le agregamos "--oneline", podemos ver la informacion en una sola linea, por el contrario, si queremos ver más información, debemos usar la opcion "-p", para salir de este modo, nos vamos al final y tecleamos :q .
 
 para más informacion al respecto, podemos visitar: https://devhints.io/git-log 
+
+git init --bare 
+Con este comando creamos un repositorio que no tendrá la working tree, o sea, no contendrá una copia de nuestros archivos. Como el repositorio servirá solo como servidor, para que otros miembros del equipo sincronicen sus trabajos, disminuimos espacio de almacenamiento de esta forma.
+
+git remote add nombredelRepo pathdelRepo //agregar un servidor 
+fetch es desde donde y push es hacia donde, con remote enviamos información a un servidor remoto 
+
+git clone nos sirve para clonar nuestros repositorios, trae un repositorio remoto a nuestra computadora, creando un repo local
+git clone pathdelrepositorio nombredelarchivo
+
+git push desdedonde haciadonde //envia datos
+
+git pull //traer los archivos desde un repo remoto, actaliza

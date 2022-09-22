@@ -270,3 +270,21 @@ p::first-line{
         color: red;
     }
 */
+
+/* Medias query, las medias query nos permiten trabajar con secciones*/
+
+@media screen and (max-width: 480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .bloquePrincipal, .caja, .mapaContenido, .contenidoDiferencial, .video{
+        width: auto;
+    }
+    .listaDiferenciales, .imagenDiferencial{
+        width: 100%;
+    }
+}
+    
